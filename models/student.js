@@ -24,6 +24,12 @@ const studentsSchema = new mongoose.Schema({
   password:{
     type: String,
     require: true
+  },
+  otp:{
+    type: String,
+  },
+  otpExpiry:{
+    type: Date,
   }
 });
 const Student=mongoose.model("Students", studentsSchema);
