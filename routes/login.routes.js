@@ -1,8 +1,12 @@
-const express= require("express");
-const { studLogin } = require("../controller/login.controller");
+const express = require("express");
+const {
+  loginWithOtpRequest,
+  verifyOtpLogin,
+} = require("../controller/login.controller");
 
-const loginRouter= express.Router();
+const loginRouter = express.Router();
 
-loginRouter.post("/login",studLogin);
+loginRouter.post("/login", loginWithOtpRequest);
+loginRouter.post("/verify-otp", verifyOtpLogin);
+module.exports = { loginRouter };
 
-module.exports= {loginRouter}
