@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 const allowedOrigins = [
   "http://localhost:5173",
+  "http://localhost:5176",
   "https://login-orpin-three.vercel.app", // Add your deployed frontend URL here
   "https://login-backend-fjbu.onrender.com", // If needed
 ];
